@@ -1,7 +1,4 @@
-﻿  Request.cpp
-  QueueRequestsBooks.cpp
-  Member.cpp
-  Book.cpp
-  Generating Code...
-  QueueRequestsBooks.vcxproj -> C:\Users\sam\source\repos\QueueRequestsBooks\Debug\QueueRequestsBooks.exe
-  QueueRequestsBooks.vcxproj -> C:\Users\sam\source\repos\QueueRequestsBooks\Debug\QueueRequestsBooks.pdb (Partial PDB)
+﻿  Cua.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\cua.h(23): error C2143: syntax error: missing ';' before '}'
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\cua.cpp(15): error C2143: syntax error: missing ';' before '}'
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\cua.cpp(16): error C2447: '{': missing function header (old-style formal list?)

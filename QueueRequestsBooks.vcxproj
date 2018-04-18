@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Cua.h" />
     <ClInclude Include="Data.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="Request.h" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Cua.cpp" />
     <ClCompile Include="Data.cpp" />
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="QueueRequestsBooks.cpp" />
