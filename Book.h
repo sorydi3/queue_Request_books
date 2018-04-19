@@ -1,4 +1,7 @@
 #pragma once
+#ifndef BOOK_H
+#define BOOK_H
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -19,4 +22,4 @@ private:
 	string _ISBN;
 	double _preu;
 };
-
+#endif // !1

@@ -1,6 +1,7 @@
-#include "stdafx.h"
-#include "Cua.h"
+//#include "stdafx.h"
+#include<iostream>
 #include<iomanip>
+#include "Cua.h"
 
 Cua::Cua()
 {
@@ -31,7 +32,7 @@ void Cua::AfegirSolicitud() {
 }
 //////////////////////////////////////////////////////////////////////////////////
 
-void Cua::addLast(Request request) {
+void Cua::addLast(Request &request) {
 	Node *nw = new Node;
 	_countador++;//actualitza variable per calcular previsio
 	_price_previsio += request.getPrice();
@@ -62,18 +63,21 @@ bool Cua::isEmpty()const {
 }
 void Cua::DisplayContent() {
 	Node *temp = _first;
+	unsigned countador = 0;
 	double total_price = 0;
 	while (temp) {
+		countador++;
+		cout << setw(3) << setfill('0') << countador << " ";
 		temp->request.showRequest();
 		total_price += temp->request.getPrice();
 		temp = temp->next;
 	}
-	if (temp) {
-		cout << "TOTAL = " << fixed << setprecision(2) << total_price << " €" << endl;
+	if (_first) {
+		cout << "TOTAL = " << fixed << setprecision(2) << total_price << " \u20AC" << endl;
 	}
 	else {
 		cout << "Cua buida." << endl;
-		cout << "TOTAL = " <<"0.00"<< " €" << endl;
+		cout << "TOTAL = " <<"0.00"<< " \u20AC" << endl;
 		
 	}
 }
@@ -119,10 +123,10 @@ void Cua::presupostDisponible() {
 	double price;
 	bool trobat = false;
 	double suma = 0;
+	double comand = 0;
 	cin >> price;
 	double remanent = price;
 	Node *t = _first;
-	unsigned countador = 0;
 	if (t) {
 		while (t && !trobat) {
 			
@@ -132,9 +136,8 @@ void Cua::presupostDisponible() {
 			else{
 				suma += t->request.getPrice();
 				if (suma<= price) {
-					countador++;
+					comand += t->request.getPrice();
 					remanent-= t->request.getPrice();
-					cout << setw(3) << setfill('0') << countador << " ";
 					t->request.showRequest();
 					t = t->next;
 					deleteFirst();
@@ -146,11 +149,12 @@ void Cua::presupostDisponible() {
 			}
 
 		}
-		cout << "COMANDA  = " << remanent << " €" << endl;
-		cout << "REMANENT = " << remanent <<" €"<< endl;
+		cout << "COMANDA  = " << comand << " \u20AC" << endl;
+		cout << "REMANENT = " << remanent <<" \u20AC"<< endl;
 	}
 	else {
-		cout << "LA LLISTA ES VUIDA!" << endl;
+		cout << "COMANDA  = " << "0.00" << " \u20AC" << endl;
+		cout << "REMANENT = " <<price << " \u20AC" << endl;
 	}
 }
 
@@ -158,7 +162,7 @@ void Cua::previsio()const {
 	double result;
 	if (_countador != 0) {
 		result = _price_previsio / _countador;
-		cout << "PREVISIÓ COST: " << setprecision(2) << result << endl;
+		cout << "PREVISIÓ COST: "<< result <<" \u20AC"<< endl;
 	}
 	else {
 		cout << "PREVISIÓ COST:  Indeterminat" << endl;

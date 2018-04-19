@@ -1,22 +1,19 @@
 // QueueRequestsBooks.cpp : Defines the entry point for the console application.
 //
-
-#include "stdafx.h"
+//#include "stdafx.h"
 #include<iostream>
-#include "Book.h"
-#include "Member.h"
-#include"Request.h"
-#include"Cua.h"
+#include "Cua.h"
 
 using namespace std;
 void menu() {
 	cout << "A: AFEGIR SOL·LICITUD" << endl;
 	cout << "L: LLISTAT SOL·LICITUDS" << endl;
-	cout << "P: LLISTAT ORDRE DE COMPR" << endl;
+	cout << "P: LLISTAT ORDRE DE COMPRA" << endl;
 	cout << "C: PREVISIÓ COST SOL·LICITUD" << endl;
 	cout << "S: SORTIR [+L]" << endl;
 }
 void manager(Cua &cua,char opcio) {
+	opcio = toupper(opcio);
 	switch (opcio)
 	{
 	case 'A':
@@ -32,12 +29,14 @@ void manager(Cua &cua,char opcio) {
 		cua.previsio();
 		break;
 	default:
-		cout << "INVALID OPERACIO" << endl;
+		menu();
 		break;
 	}
 }
 int main()
 {
+	menu();
+	cout << endl;
 	Cua cua;
 	char opcio;
 	cout << "> OPCIÓ:" << endl;
@@ -47,8 +46,8 @@ int main()
 		cout << endl;
 		cout << "> OPCIÓ:" << endl;
 		cin >> opcio;
-
 	}
+	cua.DisplayContent();
     return 0;
 }
 

@@ -1,5 +1,8 @@
 #pragma once
+#ifndef MEMBER_H
+#define MEMBER_H
 #include"Data.h"
+#include<iomanip>
 class Member
 {
 public:
@@ -14,4 +17,4 @@ private:
 	unsigned _Id;
 	Data _data;
 };
-
+#endif

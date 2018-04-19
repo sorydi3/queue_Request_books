@@ -1,4 +1,7 @@
 #pragma once
+#pragma once
+#ifndef DATA_H
+#define DATA_H
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -34,3 +37,5 @@ private:
 	unsigned getMes() const;
 	unsigned getAny() const;
 };
+#endif
+

@@ -1,4 +1,7 @@
 #pragma once
+#ifndef REQUEST_H
+#define REQUEST_H
+
 #include<iostream>
 #include"Book.h"
 #include"Member.h"
@@ -17,4 +20,6 @@ private:
 	Member _member;
 	Book _book;
 };
+
+#endif // !REQUEST_H
 

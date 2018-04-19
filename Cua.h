@@ -1,7 +1,11 @@
 #pragma once
+
+#ifndef CUA_H
+#define CUA_H
+
 #include<iostream>
 #include<string>
-#include "Request.h"
+#include"Request.h"
 using namespace std;
 class Cua
 {
@@ -32,7 +36,8 @@ private:
 	void copy(const Cua& source);
 	void FreeHeap();
 	bool isEmpty()const;
-	void addLast(Request request);
+	void addLast(Request &request);
 	void deleteFirst();
 }; 
+#endif
 

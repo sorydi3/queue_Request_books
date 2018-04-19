@@ -1,7 +1,5 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Book.h"
-
-
 Book::Book()
 {
 	 _titol="";
@@ -11,19 +9,19 @@ Book::Book()
 }
 
 void Book::readBook() {
-	cin.ignore();
+	cin.ignore(100,'\n');
 	cout << "TÍTOL:" << endl;
-	getline(cin,_titol);
+	getline(cin, _titol);
 	cout << "AUTOR:" << endl;
-	getline(cin,_autor);
+	getline(cin, _autor);
 	cout << "ISBN-13:" << endl;
-	getline(cin , _ISBN);
+	cin >> _ISBN;
 	cout << "COST:" << endl;
-	//cin.ignore();
 	cin >> _preu;
 }
+
 void Book::showBook()const {
-	cout << "[ " << _titol << " | " << _autor << " | " << _ISBN << " | " << _preu << " € ] ]" << endl;
+	cout << "[ " << _titol << " | " << _autor << " | " << _ISBN << " | " << _preu << " \u20AC"<<" ] ]" << endl;
 }
 
 double Book::getPrice()const {

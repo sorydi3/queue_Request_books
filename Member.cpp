@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Member.h"
 
 
@@ -17,7 +17,7 @@ void Member::readMember() {
 	_data.llegir(1);
 }
 void Member::showMember()const{
-	cout <<"[ "<< _Id << " | ";
+	cout <<"[ " << setw(6) << setfill('0') << _Id << " | ";
 	_data.mostrar(1);
 	cout << " | ";
 }

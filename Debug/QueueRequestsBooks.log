@@ -1,3 +1,13 @@
-﻿  QueueRequestsBooks.cpp
-  QueueRequestsBooks.vcxproj -> C:\Users\sam\source\repos\QueueRequestsBooks\Debug\QueueRequestsBooks.exe
-  QueueRequestsBooks.vcxproj -> C:\Users\sam\source\repos\QueueRequestsBooks\Debug\QueueRequestsBooks.pdb (Partial PDB)
+﻿  Request.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\request.cpp(21): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  QueueRequestsBooks.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\queuerequestsbooks.cpp(54): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Member.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\member.cpp(24): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Data.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\data.cpp(131): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Cua.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\cua.cpp(171): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Book.cpp
+c:\users\sam\source\repos\queuerequestsbooks\queuerequestsbooks\book.cpp(30): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+  Generating Code...

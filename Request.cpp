@@ -1,8 +1,10 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Request.h"
 
 
-Request::Request() {}
+Request::Request() {
+
+}
 
 void Request::showRequest()const {
 	_member.showMember();
