@@ -2,9 +2,7 @@
 #include "Request.h"
 
 
-Request::Request()
-{
-}
+Request::Request() {}
 
 void Request::showRequest()const {
 	_member.showMember();
@@ -14,4 +12,7 @@ void Request::showRequest()const {
 void Request::newRequest() {
 	_member.readMember();
 	_book.readBook();
+}
+double Request ::getPrice()const {
+	return _book.getPrice();
 }

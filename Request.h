@@ -10,6 +10,7 @@ public:
 	Request();
 	//CONSULTORS
 	void showRequest()const;
+	double getPrice()const;
 	//MODIFICADORS
 	void newRequest();
 private:
